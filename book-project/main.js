@@ -1,4 +1,6 @@
 
+let text = document.querySelector('p');
+
 function Book(title, author, pages){
 
     this.title =title;
@@ -6,7 +8,8 @@ function Book(title, author, pages){
     this.pages =pages;
     this.read =["read", "not read yet"];
     this.bookInfo =function(){
-        
+      
+        text.innerText = `${this.title} by ${this.author}, ${this.pages} pages, ${this.read[1]}`;
         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read[1]}`;
     }
 
