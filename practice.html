@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+      
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+    let bandInfo1;
+    let bandInfo2;
+    let bandInfo3;
+    let bandInfo4;
+    let bandInfo5;
+
+
+    // Add your code here
+ const band ={
+    name:"The Beatles",
+    nationality:"Liverpool, United Kingdom",
+    genre:{
+        first:"Rock",
+        second:"Pop music",
+        third:"Rock and roll",
+        fourth:"Country music",
+        fifth:"classic rock",
+        sixth:"beat music"
+    },
+    members:{
+        firstPerson:"John Lennon",
+        secondPerson:"Paul McCartney",
+        thirdPerson: "George Harrison",
+        fourthPerson: "Ringo Star"
+    },
+    formed:1960,
+    split:1998,
+    albums:[
+        {
+        name:"Abbey Road",
+        released:1969
+        },
+        {
+        name:"Rubber Soul",
+        released:2004    
+        }
+         ],
+
+     information:function(){
+        console.log(`${this.name} ${this.nationality} ${this.formed} ${this.genre.first} ${this.albums.name} ${this.albums.released}`);
+
+     }    
+    
+       
+ }
+ bandInfo = `Band Name:${band.name}`;
+ bandInfo1 = `Band Nationality:${band.nationality}`;
+ bandInfo2 = `Band Genre: ${band.genre.first} ${band.genre.second} ${band.genre.third} ${band.genre.fourth} ${band.genre.fifth}`;
+ bandInfo3 = `Band Members: ${band.members.firstPerson} ${band.members.secondPerson} ${band.members.thirdPerson}`;
+ bandInfo4 = `Band Split: ${band.split}`;
+ bandInfo5 = `Band Albums: ${band["albums"]}`;
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let para3 = document.createElement('p');
+    let para4 = document.createElement('p');
+    let para5 = document.createElement('p');
+    let para6 = document.createElement('p');
+    
+    para1.textContent = bandInfo;
+    para2.textContent = bandInfo1;
+    para3.textContent = bandInfo2;
+    para4.textContent = bandInfo3;
+    para5.textContent = bandInfo4;
+    para6.textContent = bandInfo5;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+    section.appendChild(para3);
+    section.appendChild(para4);
+    section.appendChild(para5);
+    section.appendChild(para6);
+   
+  </script>
