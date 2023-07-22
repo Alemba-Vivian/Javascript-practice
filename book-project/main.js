@@ -1,5 +1,6 @@
 
-let text = document.querySelector('p');
+let text = document.querySelector('ul');
+
 
 function Book(title, author, pages){
 
@@ -17,3 +18,4 @@ function Book(title, author, pages){
 }
 const book1 = new Book("The Hobbit", "J.R.R. Tolkie", 295);
 console.log(book1.bookInfo());
+
