@@ -56,4 +56,18 @@ counter();
 counter();
 
 
+//How to use prototypes in factory functions 
+const Person =(name)=>{
+    const sayHello=()=>console.log(`my name is ${name}`);
+    return{sayHello};
+}
 
+const Person1 =(name)=>{
+    const {sayHello} = Person(name);
+    const doSomething = ()=>console.log(`hello ${name}`);
+    return {sayHello, doSomething};
+}
+
+const vivian2 = Person1("Alemba");
+vivian2.sayHello();
+vivian2.doSomething();
